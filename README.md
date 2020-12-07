@@ -1,2 +1,2 @@
-# Exploraci-n-espacios-de-dise-o
+# Exploracion Espacios de Diseno
 Proyecto Grupal 2 Arqui 1
