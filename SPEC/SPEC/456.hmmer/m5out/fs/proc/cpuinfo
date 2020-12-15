@@ -5,7 +5,7 @@ model           : 0
 model name      : Generic
 stepping        : 0
 cpu MHz         : 2000.000
-cache size:     : 1024.0K
+cache size:     : 128.0K
 physical id     : 0
 siblings        : 1
 core id         : 0
@@ -15,5 +15,5 @@ fpu exception   : yes
 cpuid level     : 1
 wp              : yes
 flags           : fpu
-cache alignment : 64
+cache alignment : 16384
 
