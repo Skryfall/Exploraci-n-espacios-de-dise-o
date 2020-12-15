@@ -273,9 +273,9 @@
                         "path": "system.cpu.workload",
                         "cmd": [
                             "./src/benchmark",
-                            "./data/input.program"
+                            "./data/bombesin.hmm"
                         ],
-                        "cwd": "/home/isaacpope/Desktop/ArquiProyecto2/SPEC/456.hmmer",
+                        "cwd": "/home/isaacpope/Desktop/Exploracion-Espacios-de-Diseno/SPEC/SPEC/456.hmmer",
                         "drivers": [],
                         "egid": 100,
                         "env": [],

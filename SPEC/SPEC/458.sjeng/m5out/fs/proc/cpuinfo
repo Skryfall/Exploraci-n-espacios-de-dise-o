@@ -15,5 +15,5 @@ fpu exception   : yes
 cpuid level     : 1
 wp              : yes
 flags           : fpu
-cache alignment : 32
+cache alignment : 16384
 

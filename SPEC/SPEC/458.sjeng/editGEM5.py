@@ -9,6 +9,8 @@ export BENCHMARK=./src/benchmark
 export ARGUMENT=./data/input.program
 time $OPT -d m5out/ $PY -c $BENCHMARK -o $ARGUMENT -I 100000000 --cpu-type=TimingSimpleCPU --caches --l2cache --l1d_size=128kB --l1i_size=128kB --l2_size=128kB --l1d_assoc=2 --l1i_assoc=2 --l2_assoc=2 --cacheline_size=32"""
 rep = 128
+"""
+
 #l1d size
 for i in range(10):
     insts2 = insts
@@ -81,6 +83,7 @@ for i in range(10):
     f.close()
     os.system('sh exGEM5.sh')
     os.system('cp m5out/stats.txt stats/l2_assoc/'+newfile)
+"""
 #line size
 for i in range(10):
     insts2 = insts
@@ -91,5 +94,5 @@ for i in range(10):
     f = open("exGEM5.sh", "w")
     f.write(insts2)
     f.close()
-    os.system('./exGEM5.sh')
+    os.system('sh exGEM5.sh')
     os.system('cp m5out/stats.txt stats/cacheline/'+newfile)
