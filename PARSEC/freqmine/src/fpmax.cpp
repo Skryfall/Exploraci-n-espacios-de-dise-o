@@ -121,12 +121,12 @@ int main(int argc, char **argv)
 	__parsec_bench_begin(__parsec_freqmine);
 #endif
 	
-	if (argc < 3)
-	{
-	  cout << "usage: " << argv[0] << " <infile> <MINSUP> [<outfile>]\n";
-	  exit(1);
-	}
-	THRESHOLD = atoi(argv[2]);
+//	if (argc < 3)
+//	{
+//	  cout << "usage: " << argv[0] << " <infile> <MINSUP> [<outfile>]\n";
+//	  exit(1);
+//	}
+	THRESHOLD = 2;
 
 	Data* fdat=new Data(argv[1]);
 

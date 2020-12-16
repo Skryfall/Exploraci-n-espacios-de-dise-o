@@ -1,9 +1,6 @@
-# -- Script genérico para ejecución de GEM5 --
-# -- Dirección donde GEM5 fue construı́do --
-export GEM5_DIR=/home/fabelifer2797/Documents/GEM5/gem5
+export GEM5_DIR=/home/skryfall/Documents/GEM5/gem5
 export OPT=$GEM5_DIR/build/X86/gem5.opt
 export PY=$GEM5_DIR/configs/example/se.py
 export BENCHMARK=./src/swaptions
 export ARGUMENT=./
-# -- Ejecución del ambiente --
-time $OPT -d m5out/ $PY -c $BENCHMARK -o $ARGUMENT
+time $OPT -d m5out/ $PY -c $BENCHMARK -o $ARGUMENT -I 100000000 --cpu-type=TimingSimpleCPU --caches --l2cache --l1d_size=128kB --l1i_size=128kB --l2_size=128kB --l1d_assoc=2 --l1i_assoc=2 --l2_assoc=2 --cacheline_size=16384
