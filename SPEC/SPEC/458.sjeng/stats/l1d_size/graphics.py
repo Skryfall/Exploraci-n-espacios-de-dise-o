@@ -8,7 +8,7 @@ hits = []
 numCycles = []
 insts = []
 CPI = []
-writebacks = np.zeros(10)
+writebacks = np.zeros(5)
 
 
 for i in range(5):
