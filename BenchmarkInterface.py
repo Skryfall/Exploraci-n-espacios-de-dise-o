@@ -1,4 +1,6 @@
 import tkinter as tk
+import os
+#sudo apt-get install python3-tk
 
 root = tk.Tk()
 root.geometry("1000x500")
@@ -12,16 +14,21 @@ benchmarks = {1: '429.mcf', 2 : '456.hmmer', 3 : "458.sjeng", 4 : "blackscholes"
 params = {10: 'cacheline', 11: 'l1d_assoc', 12 : "l1d_size", 13 : "l1i_assoc" ,  14 :"l1i_size" , 15: "l2_assoc", 16: "l2_size"}
 
 def ShowChoice():
-    print(benchmarks.get(v.get()))
+    return
+    #print(benchmarks.get(v.get()))
 
 def ShowParam():
-    print(params.get(param.get()))
+    return
+    #print(params.get(param.get()))
 
 def ejecutar():
     print('----------------------------------ejecutar---------------------------')
     print(benchmarks.get(v.get()))
+    #v.get() el benchmark a correr
     print(params.get(param.get()))
+    #param.get el parametro a variar
     print('-------------------------------------------------------------')
+    os.system("python3 SPEC/SPEC/"+benchmarks.get(v.get())+"/stats/"+params.get(param.get())+"/graphics.py ")
 
 tk.Label(root, text="""Seleccione el Benchmark a Utilizar:""", justify = tk.RIGHT, padx = 20, font=("Courier", 10)).grid(row=0, column=1)
 

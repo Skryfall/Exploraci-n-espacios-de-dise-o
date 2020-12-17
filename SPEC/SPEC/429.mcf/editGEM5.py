@@ -83,7 +83,6 @@ for i in range(10):
     f.close()
     os.system('sh exGEM5.sh')
     os.system('cp m5out/stats.txt stats/l2_assoc/'+newfile)
-
 #line size
 for i in range(10):
     insts2 = insts
