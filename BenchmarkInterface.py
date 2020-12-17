@@ -3,7 +3,7 @@ import os
 #sudo apt-get install python3-tk
 
 root = tk.Tk()
-root.geometry("1000x500")
+root.geometry("1000x300")
 root.title('Ejecutador de Benchmarks para SPEC y PARSEC')
 v = tk.IntVar()
 v.set(1)  # initializing the choice, i.e. Python
@@ -69,25 +69,26 @@ tk.Label(root, text="""Seleccione el parametro que quiere variar:""", justify = 
 j = j + 1
 
 columnaAtributos = 0
-tk.Radiobutton(root,text="cacheline", padx = 20, variable=param, command=ShowParam,value=10,).grid(row=j, column=columnaAtributos)
-columnaAtributos = columnaAtributos + 1
-
-tk.Radiobutton(root,text="l1d_assoc", padx = 20, variable=param, command=ShowParam,value=11,).grid(row=j, column=columnaAtributos)
-columnaAtributos = columnaAtributos + 1
-
 tk.Radiobutton(root,text="l1d_size", padx = 20, variable=param, command=ShowParam,value=12,).grid(row=j, column=columnaAtributos)
 columnaAtributos = columnaAtributos + 1
 
-tk.Radiobutton(root,text="l1i_assoc", padx = 20, variable=param, command=ShowParam,value=13,).grid(row=j, column=columnaAtributos)
+tk.Radiobutton(root,text="l1i_size", padx = 20, variable=param, command=ShowParam,value=14,).grid(row=j, column=columnaAtributos)
+columnaAtributos = columnaAtributos + 1
+
+tk.Radiobutton(root,text="l2_size", padx = 20, variable=param, command=ShowParam,value=16,).grid(row=j, column=columnaAtributos)
+columnaAtributos = columnaAtributos + 1
+
+tk.Radiobutton(root,text="l1d_assoc", padx = 20, variable=param, command=ShowParam,value=11,).grid(row=j, column=columnaAtributos)
 columnaAtributos = 0
 j = j + 1
-tk.Radiobutton(root,text="l1i_size", padx = 20, variable=param, command=ShowParam,value=14,).grid(row=j, column=columnaAtributos)
+tk.Radiobutton(root,text="l1i_assoc", padx = 20, variable=param, command=ShowParam,value=13,).grid(row=j, column=columnaAtributos)
 columnaAtributos = columnaAtributos + 1
 
 tk.Radiobutton(root,text="l2_assoc", padx = 20, variable=param, command=ShowParam,value=15,).grid(row=j, column=columnaAtributos)
 columnaAtributos = columnaAtributos + 1
 
-tk.Radiobutton(root,text="l2_size", padx = 20, variable=param, command=ShowParam,value=16,).grid(row=j, column=columnaAtributos)
+tk.Radiobutton(root,text="cacheline", padx = 20, variable=param, command=ShowParam,value=10,).grid(row=j, column=columnaAtributos)
+
 columnaAtributos = columnaAtributos + 1
 
 j = j + 1
