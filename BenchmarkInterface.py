@@ -28,7 +28,10 @@ def ejecutar():
     print(params.get(param.get()))
     #param.get el parametro a variar
     print('-------------------------------------------------------------')
-    os.system("python3 SPEC/SPEC/"+benchmarks.get(v.get())+"/stats/"+params.get(param.get())+"/graphics.py ")
+    if (v.get() > 3):
+        os.system("python3 PARSEC/"+benchmarks.get(v.get())+"/stats/"+params.get(param.get())+"/graphics.py ")
+    if(v.get() <4):
+        os.system("python3 SPEC/SPEC/"+benchmarks.get(v.get())+"/stats/"+params.get(param.get())+"/graphics.py ")
 
 tk.Label(root, text="""Seleccione el Benchmark a Utilizar:""", justify = tk.RIGHT, padx = 20, font=("Courier", 10)).grid(row=0, column=1)
 
