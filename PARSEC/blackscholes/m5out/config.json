@@ -99,8 +99,8 @@
                 "name": "cpu",
                 "path": "system.cpu",
                 "branchPred": {
-                    "type": "TournamentBP",
-                    "cxx_class": "TournamentBP",
+                    "type": "BiModeBP",
+                    "cxx_class": "BiModeBP",
                     "name": "branchPred",
                     "path": "system.cpu.branchPred",
                     "BTBEntries": 4096,
@@ -128,9 +128,6 @@
                         "numThreads": 1
                     },
                     "instShiftAmt": 2,
-                    "localCtrBits": 2,
-                    "localHistoryTableSize": 2048,
-                    "localPredictorSize": 2048,
                     "numThreads": 1
                 },
                 "checker": null,
