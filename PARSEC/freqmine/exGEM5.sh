@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-export GEM5_DIR=/home/fabelifer2797/Documents/GEM5/gem5
-=======
-export GEM5_DIR=/home/luis/Documents/GEM5/gem5
->>>>>>> main
+export GEM5_DIR=/home/isaacpope/Documents/GEM5/gem5
 export OPT=$GEM5_DIR/build/X86/gem5.opt
 export PY=$GEM5_DIR/configs/example/se.py
 export BENCHMARK=./src/freqmine

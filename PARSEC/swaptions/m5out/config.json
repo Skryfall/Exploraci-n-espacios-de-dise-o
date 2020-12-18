@@ -99,22 +99,18 @@
                 "name": "cpu",
                 "path": "system.cpu",
                 "branchPred": {
-                    "type": "LocalBP",
-                    "cxx_class": "LocalBP",
+                    "type": "TournamentBP",
+                    "cxx_class": "TournamentBP",
                     "name": "branchPred",
                     "path": "system.cpu.branchPred",
-<<<<<<< HEAD
                     "BTBEntries": 1024,
-=======
-<<<<<<< HEAD
-                    "BTBEntries": 4096,
-=======
-                    "BTBEntries": 1024,
->>>>>>> main
->>>>>>> main
                     "BTBTagSize": 16,
                     "RASSize": 16,
+                    "choiceCtrBits": 2,
+                    "choicePredictorSize": 1024,
                     "eventq_index": 0,
+                    "globalCtrBits": 2,
+                    "globalPredictorSize": 1024,
                     "indirectBranchPred": {
                         "type": "SimpleIndirectPredictor",
                         "cxx_class": "SimpleIndirectPredictor",
@@ -133,7 +129,8 @@
                     },
                     "instShiftAmt": 2,
                     "localCtrBits": 2,
-                    "localPredictorSize": 1024,
+                    "localHistoryTableSize": 2048,
+                    "localPredictorSize": 4096,
                     "numThreads": 1
                 },
                 "checker": null,
@@ -312,11 +309,7 @@
                             "./src/swaptions",
                             "./"
                         ],
-<<<<<<< HEAD
-                        "cwd": "/home/fabelifer2797/Exploracion-Espacios-de-Diseno/PARSEC/swaptions",
-=======
-                        "cwd": "/home/luis/Desktop/dise-o/Exploracion-Espacios-de-Diseno/PARSEC/swaptions",
->>>>>>> main
+                        "cwd": "/home/isaacpope/Desktop/Exploracion-Espacios-de-Diseno/PARSEC/swaptions",
                         "drivers": [],
                         "egid": 100,
                         "env": [],
