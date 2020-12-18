@@ -12,7 +12,7 @@ writebacks = np.zeros(10)
 
 
 for i in range(10):
-    rep = 2**(7+i)
+    rep = 2**(1+i)
     size.append(rep)
     fileo = "SPEC/SPEC/456.hmmer/stats/l1d_assoc/stats"+str(rep)+".txt"
     with open(fileo) as f:

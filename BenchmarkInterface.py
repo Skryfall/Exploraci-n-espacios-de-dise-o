@@ -170,7 +170,7 @@ j = j + 1
 
 
 
-bpData = {301: 'BBT Entries', 302 : 'choicePredictorSize', 303 : "globalPredictorSize", 304 : "localPredictorSize" }
+bpData = {301: 'BTBEntries', 302 : 'choicePredictorSize', 303 : "globalPredictorSize", 304 : "localPredictorSize" }
 bpD = tk.IntVar()
 bpD.set(301)
 tk.Label(root, text="""Seleccione el dato que quiere variar del BP:""", justify = tk.RIGHT, padx = 20, font=("Courier", 10)).grid(row=j, column=0, sticky = tk.W)
@@ -180,7 +180,7 @@ def ShowBPData():
     return
 j = j + 1
 
-bbtRB = tk.Radiobutton(root,text="BBTEntries", padx = 20, variable=bpD, command=ShowBPData,value=301,)
+bbtRB = tk.Radiobutton(root,text="BTBEntries", padx = 20, variable=bpD, command=ShowBPData,value=301,)
 bbtRB.grid(row=j, column=0, sticky = tk.W)
 j = j + 1
 
