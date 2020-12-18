@@ -13,6 +13,8 @@ param.set(10)
 benchmarks = {1: '429.mcf', 2 : '456.hmmer', 3 : "458.sjeng", 4 : "blackscholes" ,  5 :"freqmine" , 6: "swaptions"}
 params = {10: 'cacheline', 11: 'l1d_assoc', 12 : "l1d_size", 13 : "l1i_assoc" ,  14 :"l1i_size" , 15: "l2_assoc", 16: "l2_size"}
 
+conBrachPredictor =  False
+
 def ShowChoice():
     return
     #print(benchmarks.get(v.get()))
@@ -32,8 +34,23 @@ def ejecutar():
     print('-------------------------------------------------------------')
     if (v.get() > 3):
         os.system("python3 PARSEC/"+benchmarks.get(v.get())+"/stats/"+params.get(param.get())+"/graphics.py ")
-    if(v.get() <4):
+    if(v.get() < 4):
         os.system("python3 SPEC/SPEC/"+benchmarks.get(v.get())+"/stats/"+params.get(param.get())+"/graphics.py ")
+    if (conBrachPredictor== True):
+        print('Se quiere ejecutar con Branch Predictor de:')
+        print(bpTypes.get(bp.get()))
+        print('Con los datos:')
+        print(bpData.get(bpD.get()))
+    elif (conBrachPredictor == False):
+        print('Con los datos:')
+        if (v.get() > 3):
+            os.system(
+                "python3 PARSEC/" + benchmarks.get(v.get()) + "/stats/" + params.get(param.get()) + "/graphics.py ")
+        if (v.get() < 4):
+            os.system(
+                "python3 SPEC/SPEC/" + benchmarks.get(v.get()) + "/stats/" + params.get(param.get()) + "/graphics.py ")
+
+
 
 tk.Label(root, text="""Seleccione el Benchmark a Utilizar:""", justify = tk.RIGHT, padx = 20, font=("Courier", 10)).grid(row=0, column=1)
 
@@ -130,6 +147,7 @@ def ShowBP():
     t = bpTypes.get(bp.get())
     # v.get() el benchmark a correr
     if bp.get() != 201:
+        conBrachPredictor = True
         for item in paramsRB:
             print(item)
             item.config(state='disable')
@@ -137,6 +155,7 @@ def ShowBP():
             print(item)
             item.config(state='normal')
     elif bp.get() == 201:
+        conBrachPredictor = False
         for item in paramsRB:
             print(item)
             item.config(state='normal')
