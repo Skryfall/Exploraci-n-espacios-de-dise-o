@@ -21,9 +21,7 @@ def ShowParam():
 
     print(params.get(param.get()))
 
-    for item in paramsRB:
-        print(item)
-        item.config(state='disable')
+
 
 def ejecutar():
     print('----------------------------------ejecutar---------------------------')
@@ -104,8 +102,8 @@ columnaAtributos = columnaAtributos + 1
 
 j = j + 1
 columnaAtributos = 1
-cachelineRB = tk.Radiobutton(root,text="cacheline", padx = 20, variable=param, command=ShowParam,value=10,).grid(row=j, column=columnaAtributos, sticky = tk.W)
-
+cachelineRB = tk.Radiobutton(root,text="cacheline", padx = 20, variable=param, command=ShowParam,value=10,)
+cachelineRB.grid(row=j, column=columnaAtributos, sticky = tk.W)
 columnaAtributos = columnaAtributos + 1
 
 
@@ -129,7 +127,22 @@ bp.set(201)
 
 def ShowBP():
     print(bpTypes.get(bp.get()))
+    t = bpTypes.get(bp.get())
     # v.get() el benchmark a correr
+    if bp.get() != 201:
+        for item in paramsRB:
+            print(item)
+            item.config(state='disable')
+        for item in datBP:
+            print(item)
+            item.config(state='normal')
+    elif bp.get() == 201:
+        for item in paramsRB:
+            print(item)
+            item.config(state='normal')
+        for item in datBP:
+            print(item)
+            item.config(state='disable')
 tk.Radiobutton(root,text="Sin Branch Predictor", padx = 20, variable=bp, command=ShowBP,value=201,).grid(row=j, column=columnaAtributos, sticky = tk.W)
 
 
@@ -159,19 +172,27 @@ def ShowBPData():
     print(bpData.get(bpD.get()))
 j = j + 1
 
-tk.Radiobutton(root,text="BBTEntries", padx = 20, variable=bpD, command=ShowBPData,value=301,).grid(row=j, column=0, sticky = tk.W)
+bbtRB = tk.Radiobutton(root,text="BBTEntries", padx = 20, variable=bpD, command=ShowBPData,value=301,)
+bbtRB.grid(row=j, column=0, sticky = tk.W)
 j = j + 1
 
-tk.Radiobutton(root,text="choicePredictorSize", padx = 20, variable=bpD, command=ShowBPData,value=302,).grid(row=j, column=0,sticky = tk.W)
+choicePRB = tk.Radiobutton(root,text="choicePredictorSize", padx = 20, variable=bpD, command=ShowBPData,value=302,)
+choicePRB.grid(row=j, column=0,sticky = tk.W)
 j = j + 1
 
-tk.Radiobutton(root,text="globalPredictorSize", padx = 20, variable=bpD, command=ShowBPData,value=303,).grid(row=j, column=0, sticky = tk.W)
+globalPRB = tk.Radiobutton(root,text="globalPredictorSize", padx = 20, variable=bpD, command=ShowBPData,value=303,)
+globalPRB.grid(row=j, column=0, sticky = tk.W)
 j = j + 1
 
-tk.Radiobutton(root,text="localPredictorSize", padx = 20, variable=bpD, command=ShowBPData,value=304,).grid(row=j, column=0, sticky = tk.W)
+localPRB = tk.Radiobutton(root,text="localPredictorSize", padx = 20, variable=bpD, command=ShowBPData,value=304,)
+localPRB.grid(row=j, column=0, sticky = tk.W)
 j = j + 1
 
+datBP = [bbtRB,choicePRB, globalPRB, localPRB]
 
+for item in datBP:
+    print(item)
+    item.config(state='disable')
 
 exitButton = tk.Button(root, text="Ejecutar", command=ejecutar, bg='red').grid(row=j, column=1, sticky = tk.W)
 
