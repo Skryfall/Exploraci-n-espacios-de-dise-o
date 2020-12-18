@@ -1,17 +1,17 @@
 
 ---------- Begin Simulation Statistics ----------
 final_tick                                 1470935500                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
-host_inst_rate                                 293772                       # Simulator instruction rate (inst/s)
-host_mem_usage                                 681668                       # Number of bytes of host memory used
-host_op_rate                                   548326                       # Simulator op (including micro ops) rate (op/s)
-host_seconds                                     1.60                       # Real time elapsed on the host
-host_tick_rate                              918936760                       # Simulator tick rate (ticks/s)
+host_inst_rate                                 338020                       # Simulator instruction rate (inst/s)
+host_mem_usage                                 696176                       # Number of bytes of host memory used
+host_op_rate                                   630907                       # Simulator op (including micro ops) rate (op/s)
+host_seconds                                     1.39                       # Real time elapsed on the host
+host_tick_rate                             1057349898                       # Simulator tick rate (ticks/s)
 sim_freq                                 1000000000000                       # Frequency of simulated ticks
 sim_insts                                      470192                       # Number of instructions simulated
 sim_ops                                        877675                       # Number of ops (including micro ops) simulated
 sim_seconds                                  0.001471                       # Number of seconds simulated
 sim_ticks                                  1470935500                       # Number of ticks simulated
-system.cpu.BranchMispred                         8026                       # Number of branch mispredictions
+system.cpu.BranchMispred                         6084                       # Number of branch mispredictions
 system.cpu.Branches                             72572                       # Number of branches fetched
 system.cpu.committedInsts                      470192                       # Number of instructions committed
 system.cpu.committedOps                        877675                       # Number of ops (including micro ops) committed
@@ -95,7 +95,7 @@ system.cpu.op_class::FloatMemWrite              33637      3.83%    100.00% # Cl
 system.cpu.op_class::IprAccess                      0      0.00%    100.00% # Class of executed instruction
 system.cpu.op_class::InstPrefetch                   0      0.00%    100.00% # Class of executed instruction
 system.cpu.op_class::total                     877822                       # Class of executed instruction
-system.cpu.predictedBranches                    34928                       # Number of branches predicted as taken
+system.cpu.predictedBranches                    37007                       # Number of branches predicted as taken
 system.cpu.workload.numSyscalls                    57                       # Number of system calls
 system.membus.snoop_filter.hit_multi_requests            0                       # Number of requests hitting in the snoop filter with multiple (>1) holders of the requested data.
 system.membus.snoop_filter.hit_multi_snoops            0                       # Number of snoops hitting in the snoop filter with multiple (>1) holders of the requested data.
@@ -112,16 +112,16 @@ system.tol2bus.snoop_filter.tot_snoops           4533                       # To
 system.clk_domain.clock                          1000                       # Clock period in ticks
 system.cpu.branchPred.lookups                   72572                       # Number of BP lookups
 system.cpu.branchPred.condPredicted             50081                       # Number of conditional branches predicted
-system.cpu.branchPred.condIncorrect              8026                       # Number of conditional branches incorrect
-system.cpu.branchPred.BTBLookups                26501                       # Number of BTB lookups
-system.cpu.branchPred.BTBHits                   25810                       # Number of BTB hits
-system.cpu.branchPred.BTBHitPct             97.392551                       # BTB Hit Percentage
+system.cpu.branchPred.condIncorrect              6084                       # Number of conditional branches incorrect
+system.cpu.branchPred.BTBLookups                29435                       # Number of BTB lookups
+system.cpu.branchPred.BTBHits                   27895                       # Number of BTB hits
+system.cpu.branchPred.BTBHitPct             94.768133                       # BTB Hit Percentage
 system.cpu.branchPred.RASUsed                    6841                       # Number of times the RAS was used to get a target.
 system.cpu.branchPred.RASIncorrect                  0                       # Number of incorrect RAS predictions.
-system.cpu.branchPred.indirectLookups            2670                       # Number of indirect predictor lookups.
-system.cpu.branchPred.indirectHits               2277                       # Number of indirect target hits.
-system.cpu.branchPred.indirectMisses              393                       # Number of indirect misses.
-system.cpu.branchPred.indirectMispredicted          453                       # Number of mispredicted indirect branches.
+system.cpu.branchPred.indirectLookups            2689                       # Number of indirect predictor lookups.
+system.cpu.branchPred.indirectHits               2271                       # Number of indirect target hits.
+system.cpu.branchPred.indirectMisses              418                       # Number of indirect misses.
+system.cpu.branchPred.indirectMispredicted          481                       # Number of mispredicted indirect branches.
 system.cpu.dcache.demand_hits::.cpu.data       214264                       # number of demand (read+write) hits
 system.cpu.dcache.demand_hits::total           214264                       # number of demand (read+write) hits
 system.cpu.dcache.overall_hits::.cpu.data       214264                       # number of overall hits
