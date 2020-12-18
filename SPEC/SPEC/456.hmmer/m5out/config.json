@@ -99,6 +99,7 @@
                 "name": "cpu",
                 "path": "system.cpu",
                 "branchPred": {
+<<<<<<< HEAD
                     "type": "LocalBP",
                     "cxx_class": "LocalBP",
                     "name": "branchPred",
@@ -107,6 +108,29 @@
                     "BTBTagSize": 16,
                     "RASSize": 16,
                     "eventq_index": 0,
+=======
+<<<<<<< HEAD
+                    "type": "BiModeBP",
+                    "cxx_class": "BiModeBP",
+=======
+                    "type": "LocalBP",
+                    "cxx_class": "LocalBP",
+>>>>>>> main
+                    "name": "branchPred",
+                    "path": "system.cpu.branchPred",
+                    "BTBEntries": 4096,
+                    "BTBTagSize": 16,
+                    "RASSize": 16,
+<<<<<<< HEAD
+                    "choiceCtrBits": 2,
+                    "choicePredictorSize": 1024,
+                    "eventq_index": 0,
+                    "globalCtrBits": 2,
+                    "globalPredictorSize": 1024,
+=======
+                    "eventq_index": 0,
+>>>>>>> main
+>>>>>>> main
                     "indirectBranchPred": {
                         "type": "SimpleIndirectPredictor",
                         "cxx_class": "SimpleIndirectPredictor",
@@ -124,8 +148,16 @@
                         "numThreads": 1
                     },
                     "instShiftAmt": 2,
+<<<<<<< HEAD
                     "localCtrBits": 2,
                     "localPredictorSize": 1024,
+=======
+<<<<<<< HEAD
+=======
+                    "localCtrBits": 2,
+                    "localPredictorSize": 1024,
+>>>>>>> main
+>>>>>>> main
                     "numThreads": 1
                 },
                 "checker": null,
@@ -304,7 +336,15 @@
                             "./src/benchmark",
                             "./data/bombesin.hmm"
                         ],
+<<<<<<< HEAD
                         "cwd": "/home/skryfall/Documents/Exploracion-Espacios-de-Diseno/SPEC/SPEC/456.hmmer",
+=======
+<<<<<<< HEAD
+                        "cwd": "/home/fabelifer2797/Exploracion-Espacios-de-Diseno/SPEC/SPEC/456.hmmer",
+=======
+                        "cwd": "/home/luis/Desktop/dise-o/Exploracion-Espacios-de-Diseno/SPEC/SPEC/456.hmmer",
+>>>>>>> main
+>>>>>>> main
                         "drivers": [],
                         "egid": 100,
                         "env": [],

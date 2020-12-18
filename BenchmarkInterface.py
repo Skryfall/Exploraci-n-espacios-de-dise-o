@@ -44,10 +44,10 @@ i = i + 1
 
 tk.Radiobutton(root,text="429.mcf", padx = 20, variable=v, command=ShowChoice, value=1,).grid(row=i, column=columna)
 i = i + 1
-print(i)
+#print(i)
 tk.Radiobutton(root,text="456.hmmer", padx = 20, variable=v, command=ShowChoice,value=2, ).grid(row=i, column=columna)
 i = i + 1
-print(i)
+#print(i)
 tk.Radiobutton(root,text="458.sjeng", padx = 20, variable=v, command=ShowChoice,value=3).grid(row=i, column=columna)
 i = i + 1
 
@@ -59,10 +59,10 @@ j =j+ 1
 
 tk.Radiobutton(root,text="blackscholes", padx = 20, variable=v, command=ShowChoice, value=4).grid(row=j, column=columna)
 j =j+ 1
-print(i)
+#print(i)
 tk.Radiobutton(root,text="freqmine", padx = 20, variable=v, command=ShowChoice,value=5).grid(row=j, column=columna)
 j =j+ 1
-print(i)
+#print(i)
 tk.Radiobutton(root,text="swaptions", padx = 20, variable=v, command=ShowChoice,value=6).grid(row=j, column=columna)
 j =j+ 1
 
@@ -81,15 +81,19 @@ columnaAtributos = columnaAtributos + 1
 tk.Radiobutton(root,text="l2_size", padx = 20, variable=param, command=ShowParam,value=16,).grid(row=j, column=columnaAtributos)
 columnaAtributos = columnaAtributos + 1
 
-tk.Radiobutton(root,text="l1d_assoc", padx = 20, variable=param, command=ShowParam,value=11,).grid(row=j, column=columnaAtributos)
-columnaAtributos = 0
 j = j + 1
+columnaAtributos = 0
+tk.Radiobutton(root,text="l1d_assoc", padx = 20, variable=param, command=ShowParam,value=11,).grid(row=j, column=columnaAtributos)
+columnaAtributos = columnaAtributos + 1
+
 tk.Radiobutton(root,text="l1i_assoc", padx = 20, variable=param, command=ShowParam,value=13,).grid(row=j, column=columnaAtributos)
 columnaAtributos = columnaAtributos + 1
 
 tk.Radiobutton(root,text="l2_assoc", padx = 20, variable=param, command=ShowParam,value=15,).grid(row=j, column=columnaAtributos)
 columnaAtributos = columnaAtributos + 1
 
+j = j + 1
+columnaAtributos = 1
 tk.Radiobutton(root,text="cacheline", padx = 20, variable=param, command=ShowParam,value=10,).grid(row=j, column=columnaAtributos)
 
 columnaAtributos = columnaAtributos + 1

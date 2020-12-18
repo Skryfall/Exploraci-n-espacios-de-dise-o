@@ -103,7 +103,15 @@
                     "cxx_class": "LocalBP",
                     "name": "branchPred",
                     "path": "system.cpu.branchPred",
+<<<<<<< HEAD
                     "BTBEntries": 1024,
+=======
+<<<<<<< HEAD
+                    "BTBEntries": 4096,
+=======
+                    "BTBEntries": 1024,
+>>>>>>> main
+>>>>>>> main
                     "BTBTagSize": 16,
                     "RASSize": 16,
                     "eventq_index": 0,
@@ -304,7 +312,11 @@
                             "./src/freqmine",
                             "./inputs/T10I4D100K_3.dat"
                         ],
-                        "cwd": "/home/skryfall/Documents/Exploracion-Espacios-de-Diseno/PARSEC/freqmine",
+<<<<<<< HEAD
+                        "cwd": "/home/fabelifer2797/Exploracion-Espacios-de-Diseno/PARSEC/freqmine",
+=======
+                        "cwd": "/home/luis/Desktop/dise-o/Exploracion-Espacios-de-Diseno/PARSEC/freqmine",
+>>>>>>> main
                         "drivers": [],
                         "egid": 100,
                         "env": [],

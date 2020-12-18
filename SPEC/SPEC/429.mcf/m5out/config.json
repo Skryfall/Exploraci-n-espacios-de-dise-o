@@ -103,7 +103,15 @@
                     "cxx_class": "LocalBP",
                     "name": "branchPred",
                     "path": "system.cpu.branchPred",
+<<<<<<< HEAD
                     "BTBEntries": 1024,
+=======
+<<<<<<< HEAD
+                    "BTBEntries": 4096,
+=======
+                    "BTBEntries": 1024,
+>>>>>>> main
+>>>>>>> main
                     "BTBTagSize": 16,
                     "RASSize": 16,
                     "eventq_index": 0,
@@ -304,7 +312,15 @@
                             "./src/benchmark",
                             "./data/inp.in"
                         ],
+<<<<<<< HEAD
                         "cwd": "/home/skryfall/Documents/Exploracion-Espacios-de-Diseno/SPEC/SPEC/429.mcf",
+=======
+<<<<<<< HEAD
+                        "cwd": "/home/fabelifer2797/Exploracion-Espacios-de-Diseno/SPEC/SPEC/429.mcf",
+=======
+                        "cwd": "/home/luis/Desktop/dise-o/Exploracion-Espacios-de-Diseno/SPEC/SPEC/429.mcf",
+>>>>>>> main
+>>>>>>> main
                         "drivers": [],
                         "egid": 100,
                         "env": [],
