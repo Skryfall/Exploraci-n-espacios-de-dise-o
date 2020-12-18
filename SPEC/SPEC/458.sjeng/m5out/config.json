@@ -99,16 +99,6 @@
                 "name": "cpu",
                 "path": "system.cpu",
                 "branchPred": {
-<<<<<<< HEAD
-                    "type": "LocalBP",
-                    "cxx_class": "LocalBP",
-                    "name": "branchPred",
-                    "path": "system.cpu.branchPred",
-                    "BTBEntries": 1024,
-                    "BTBTagSize": 16,
-                    "RASSize": 16,
-                    "eventq_index": 0,
-=======
                     "type": "TournamentBP",
                     "cxx_class": "TournamentBP",
                     "name": "branchPred",
@@ -121,7 +111,6 @@
                     "eventq_index": 0,
                     "globalCtrBits": 2,
                     "globalPredictorSize": 1024,
->>>>>>> main
                     "indirectBranchPred": {
                         "type": "SimpleIndirectPredictor",
                         "cxx_class": "SimpleIndirectPredictor",
@@ -140,10 +129,7 @@
                     },
                     "instShiftAmt": 2,
                     "localCtrBits": 2,
-<<<<<<< HEAD
-=======
                     "localHistoryTableSize": 2048,
->>>>>>> main
                     "localPredictorSize": 1024,
                     "numThreads": 1
                 },
@@ -321,13 +307,9 @@
                         "path": "system.cpu.workload",
                         "cmd": [
                             "./src/benchmark",
-                            "./data/input.program"
+                            "./data/test.txt"
                         ],
-<<<<<<< HEAD
-                        "cwd": "/home/skryfall/Documents/Exploracion-Espacios-de-Diseno/SPEC/SPEC/458.sjeng",
-=======
                         "cwd": "/home/luis/Desktop/dise-o/Exploracion-Espacios-de-Diseno/SPEC/SPEC/458.sjeng",
->>>>>>> main
                         "drivers": [],
                         "egid": 100,
                         "env": [],
