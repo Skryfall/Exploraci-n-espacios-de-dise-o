@@ -99,14 +99,18 @@
                 "name": "cpu",
                 "path": "system.cpu",
                 "branchPred": {
-                    "type": "LocalBP",
-                    "cxx_class": "LocalBP",
+                    "type": "TournamentBP",
+                    "cxx_class": "TournamentBP",
                     "name": "branchPred",
                     "path": "system.cpu.branchPred",
                     "BTBEntries": 1024,
                     "BTBTagSize": 16,
                     "RASSize": 16,
+                    "choiceCtrBits": 2,
+                    "choicePredictorSize": 1024,
                     "eventq_index": 0,
+                    "globalCtrBits": 2,
+                    "globalPredictorSize": 1024,
                     "indirectBranchPred": {
                         "type": "SimpleIndirectPredictor",
                         "cxx_class": "SimpleIndirectPredictor",
@@ -125,7 +129,8 @@
                     },
                     "instShiftAmt": 2,
                     "localCtrBits": 2,
-                    "localPredictorSize": 1024,
+                    "localHistoryTableSize": 2048,
+                    "localPredictorSize": 4096,
                     "numThreads": 1
                 },
                 "checker": null,
@@ -304,11 +309,7 @@
                             "./src/blackscholes",
                             "./inputs/input_test/in_4.txt"
                         ],
-<<<<<<< HEAD
-                        "cwd": "/home/fabelifer2797/Exploracion-Espacios-de-Diseno/PARSEC/blackscholes",
-=======
-                        "cwd": "/home/luis/Desktop/dise-o/Exploracion-Espacios-de-Diseno/PARSEC/blackscholes",
->>>>>>> main
+                        "cwd": "/home/isaacpope/Desktop/Exploracion-Espacios-de-Diseno/PARSEC/blackscholes",
                         "drivers": [],
                         "egid": 100,
                         "env": [],
