@@ -28,25 +28,25 @@ def ShowParam():
 def ejecutar():
     print('----------------------------------ejecutar---------------------------')
     print(benchmarks.get(v.get()))
-    #v.get() el benchmark a correr
     print(params.get(param.get()))
-    #param.get el parametro a variar
+    print(conBrachPredictor)
     print('-------------------------------------------------------------')
-    if (v.get() > 3):
-        os.system("python3 PARSEC/"+benchmarks.get(v.get())+"/stats/"+params.get(param.get())+"/graphics.py ")
-    if(v.get() < 4):
-        os.system("python3 SPEC/SPEC/"+benchmarks.get(v.get())+"/stats/"+params.get(param.get())+"/graphics.py ")
-    if (conBrachPredictor== True):
+    if (conBrachPredictor):
         print('Se quiere ejecutar con Branch Predictor de:')
         print(bpTypes.get(bp.get()))
         print('Con los datos:')
         print(bpData.get(bpD.get()))
-    elif (conBrachPredictor == False):
-        print('Con los datos:')
+        if (v.get() > 3):
+            os.system(
+                "python3 PARSEC/" + benchmarks.get(v.get()) + "/stats/" +bpTypes.get(bp.get())+"/"+ bpData.get(bpD.get()) + "/graphics.py ")
+        else:
+            os.system(
+                "python3 SPEC/SPEC/" + benchmarks.get(v.get()) + "/stats/" + params.get(param.get()) + "/graphics.py ")
+    else :
         if (v.get() > 3):
             os.system(
                 "python3 PARSEC/" + benchmarks.get(v.get()) + "/stats/" + params.get(param.get()) + "/graphics.py ")
-        if (v.get() < 4):
+        else:
             os.system(
                 "python3 SPEC/SPEC/" + benchmarks.get(v.get()) + "/stats/" + params.get(param.get()) + "/graphics.py ")
 
@@ -145,7 +145,6 @@ bp.set(201)
 def ShowBP():
     print(bpTypes.get(bp.get()))
     t = bpTypes.get(bp.get())
-    # v.get() el benchmark a correr
     if bp.get() != 201:
         conBrachPredictor = True
         for item in paramsRB:
@@ -171,7 +170,7 @@ tk.Radiobutton(root,text="LocalBP", padx = 20, variable=bp, command=ShowBP,value
 
 columnaAtributos = columnaAtributos + 1
 
-tk.Radiobutton(root,text="TorunamentBP", padx = 20, variable=bp, command=ShowBP,value=204,).grid(row=j, column=columnaAtributos, sticky = tk.W)
+tk.Radiobutton(root,text="TournamentBP", padx = 20, variable=bp, command=ShowBP,value=204,).grid(row=j, column=columnaAtributos, sticky = tk.W)
 
 columnaAtributos = columnaAtributos + 1
 
