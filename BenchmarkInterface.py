@@ -115,7 +115,7 @@ paramsRB = [l1dzRB,l1isRB, l2sRB, l1dassRB, l1iassRB, l2assRB, cachelineRB]
 
 j = j + 1
 
-bpTypes = {201: 'Sin Branch Predictor', 202 : 'BiModeBP', 203 : "LocalBP", 204 : "TorunamentBP" }
+bpTypes = {201: 'Sin Branch Predictor', 202 : 'BiModeBP', 203 : "LocalBP", 204 : "TournamentBP" }
 tk.Label(root, text="""Seleccione una opción de BP:""", justify = tk.RIGHT, padx = 20, font=("Courier", 10)).grid(row=j, column=0, sticky = tk.W)
 
 j = j + 1
