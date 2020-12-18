@@ -164,7 +164,7 @@ fontsize=14;
 label="branchPred \n: LocalBP";
 shape=Mrecord;
 style="rounded, filled";
-tooltip="BTBEntries&#61;1024&#10;\BTBTagSize&#61;16&#10;\RASSize&#61;16&#10;\eventq_index&#61;0&#10;\indirectBranchPred&#61;system.cpu.branchPred.indirectBranchPred&#10;\instShiftAmt&#61;2&#10;\localCtrBits&#61;2&#10;\localPredictorSize&#61;1024&#10;\numThreads&#61;1";
+tooltip="BTBEntries&#61;4096&#10;\BTBTagSize&#61;16&#10;\RASSize&#61;16&#10;\eventq_index&#61;0&#10;\indirectBranchPred&#61;system.cpu.branchPred.indirectBranchPred&#10;\instShiftAmt&#61;2&#10;\localCtrBits&#61;2&#10;\localPredictorSize&#61;1024&#10;\numThreads&#61;1";
 subgraph cluster_system_cpu_branchPred_indirectBranchPred {
 color="#000000";
 fillcolor="#9f9c95";
