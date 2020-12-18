@@ -17,31 +17,20 @@ conBrachPredictor =  False
 
 def ShowChoice():
     return
-    #print(benchmarks.get(v.get()))
 
 def ShowParam():
-
-    print(params.get(param.get()))
+    return
 
 
 
 def ejecutar():
-    print('----------------------------------ejecutar---------------------------')
-    print(benchmarks.get(v.get()))
-    print(params.get(param.get()))
-    print(conBrachPredictor)
-    print('-------------------------------------------------------------')
     if (conBrachPredictor):
-        print('Se quiere ejecutar con Branch Predictor de:')
-        print(bpTypes.get(bp.get()))
-        print('Con los datos:')
-        print(bpData.get(bpD.get()))
         if (v.get() > 3):
             os.system(
                 "python3 PARSEC/" + benchmarks.get(v.get()) + "/stats/" +bpTypes.get(bp.get())+"/"+ bpData.get(bpD.get()) + "/graphics.py ")
         else:
             os.system(
-                "python3 SPEC/SPEC/" + benchmarks.get(v.get()) + "/stats/" + params.get(param.get()) + "/graphics.py ")
+                "python3 SPEC/SPEC/" + benchmarks.get(v.get()) + "/stats/" +bpTypes.get(bp.get())+"/"+ bpData.get(bpD.get()) + "/graphics.py ")
     else :
         if (v.get() > 3):
             os.system(
@@ -143,23 +132,24 @@ bp = tk.IntVar()
 bp.set(201)
 
 def ShowBP():
-    print(bpTypes.get(bp.get()))
+    global conBrachPredictor
+    #print(bpTypes.get(bp.get()))
     t = bpTypes.get(bp.get())
     if bp.get() != 201:
         conBrachPredictor = True
         for item in paramsRB:
-            print(item)
+            #print(item)
             item.config(state='disable')
         for item in datBP:
-            print(item)
+            #print(item)
             item.config(state='normal')
     elif bp.get() == 201:
         conBrachPredictor = False
         for item in paramsRB:
-            print(item)
+            #print(item)
             item.config(state='normal')
         for item in datBP:
-            print(item)
+            #print(item)
             item.config(state='disable')
 tk.Radiobutton(root,text="Sin Branch Predictor", padx = 20, variable=bp, command=ShowBP,value=201,).grid(row=j, column=columnaAtributos, sticky = tk.W)
 
@@ -187,7 +177,7 @@ tk.Label(root, text="""Seleccione el dato que quiere variar del BP:""", justify 
 
 
 def ShowBPData():
-    print(bpData.get(bpD.get()))
+    return
 j = j + 1
 
 bbtRB = tk.Radiobutton(root,text="BBTEntries", padx = 20, variable=bpD, command=ShowBPData,value=301,)
@@ -209,7 +199,6 @@ j = j + 1
 datBP = [bbtRB,choicePRB, globalPRB, localPRB]
 
 for item in datBP:
-    print(item)
     item.config(state='disable')
 
 exitButton = tk.Button(root, text="Ejecutar", command=ejecutar, bg='red').grid(row=j, column=1, sticky = tk.W)
