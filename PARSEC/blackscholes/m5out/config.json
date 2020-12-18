@@ -99,18 +99,14 @@
                 "name": "cpu",
                 "path": "system.cpu",
                 "branchPred": {
-                    "type": "BiModeBP",
-                    "cxx_class": "BiModeBP",
+                    "type": "LocalBP",
+                    "cxx_class": "LocalBP",
                     "name": "branchPred",
                     "path": "system.cpu.branchPred",
-                    "BTBEntries": 4096,
+                    "BTBEntries": 1024,
                     "BTBTagSize": 16,
                     "RASSize": 16,
-                    "choiceCtrBits": 2,
-                    "choicePredictorSize": 8192,
                     "eventq_index": 0,
-                    "globalCtrBits": 2,
-                    "globalPredictorSize": 8192,
                     "indirectBranchPred": {
                         "type": "SimpleIndirectPredictor",
                         "cxx_class": "SimpleIndirectPredictor",
@@ -128,6 +124,8 @@
                         "numThreads": 1
                     },
                     "instShiftAmt": 2,
+                    "localCtrBits": 2,
+                    "localPredictorSize": 1024,
                     "numThreads": 1
                 },
                 "checker": null,
@@ -306,7 +304,7 @@
                             "./src/blackscholes",
                             "./inputs/input_test/in_4.txt"
                         ],
-                        "cwd": "/home/skryfall/Documents/Exploracion-Espacios-de-Diseno/PARSEC/blackscholes",
+                        "cwd": "/home/luis/Desktop/dise-o/Exploracion-Espacios-de-Diseno/PARSEC/blackscholes",
                         "drivers": [],
                         "egid": 100,
                         "env": [],
